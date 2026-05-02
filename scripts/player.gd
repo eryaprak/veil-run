@@ -25,7 +25,6 @@ var is_invincible := false
 var veil_shift_cooldown := 0.0
 var veil_shift_cooldown_time := 0.8
 
-@onready var animation_player = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var collision_shape = $CollisionShape2D
 @onready var veil_particles = $VeilParticles

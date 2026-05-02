@@ -17,7 +17,24 @@ var checkpoint_interval := 500.0  # meters
 func _ready():
 	randomize()
 	setup_camera()
-	show_menu()
+	connect_signals()
+	ui.show_menu()
+
+func connect_signals():
+	player.died.connect(game_over)
+	player.coin_collected.connect(collect_coin)
+	player.veil_shifted.connect(_on_veil_shifted)
+	ui.continue_button_pressed.connect(continue_run)
+	ui.double_coins_button_pressed.connect(_on_double_coins)
+	ui.menu_button_pressed.connect(show_menu)
+
+func _on_veil_shifted(dimension: String):
+	ui.update_veil_indicator(dimension)
+
+func _on_double_coins():
+	# Rewarded ad callback -> double coins
+	coins *= 2
+	ui.update_coins(coins)
 
 func _process(delta):
 	if game_state == "playing":
@@ -30,7 +47,7 @@ func setup_camera():
 
 func show_menu():
 	game_state = "menu"
-	# TODO: Show menu UI
+	ui.show_menu()
 
 func start_game():
 	game_state = "playing"
@@ -39,7 +56,9 @@ func start_game():
 	distance = 0.0
 	player.reset()
 	track_manager.start_generation()
-	# TODO: Hide menu, show HUD
+	ui.show_hud()
+	ui.update_coins(0)
+	ui.update_distance(0)
 
 func update_distance(delta):
 	distance += player.current_speed * delta
@@ -61,7 +80,6 @@ func collect_coin():
 
 func game_over():
 	game_state = "game_over"
-	# TODO: Show game over screen with rewarded ad offers
 	ui.show_game_over(score, coins, int(distance))
 
 func continue_run():
