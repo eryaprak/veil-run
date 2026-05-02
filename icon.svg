@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="veilGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b00ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff006e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffbe0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" fill="#0a0412"/>
+  <path d="M 64 20 L 90 50 L 90 80 L 64 110 L 38 80 L 38 50 Z" fill="url(#veilGradient)" opacity="0.9"/>
+  <circle cx="64" cy="64" r="15" fill="#ffbe0b" opacity="0.8"/>
+  <path d="M 50 64 L 64 50 L 78 64 L 64 78 Z" fill="#0a0412" opacity="0.6"/>
+</svg>
