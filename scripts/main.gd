@@ -82,6 +82,11 @@ func collect_coin():
 func game_over():
 	game_state = "game_over"
 	track_manager.stop_generation()
+	
+	# Update persistent data
+	GameData.add_coins(coins)
+	GameData.update_high_score(int(distance))
+	
 	ui.show_game_over(score, coins, int(distance))
 
 func continue_run():
