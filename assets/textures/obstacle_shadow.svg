@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crystal Obstacle - Shadow Dimension -->
+  <defs>
+    <radialGradient id="glowShadow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#8b00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a00e0;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <circle cx="40" cy="40" r="35" fill="url(#glowShadow)" opacity="0.6"/>
+  <polygon points="40,5 55,30 65,40 55,50 40,75 25,50 15,40 25,30" fill="#6b2fba" opacity="0.9"/>
+  <polygon points="40,15 50,35 55,40 50,45 40,65 30,45 25,40 30,35" fill="#8b00ff"/>
+  <circle cx="40" cy="40" r="6" fill="#c77dff"/>
+</svg>
