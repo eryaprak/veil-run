@@ -1,5 +1,6 @@
 extends Node
-class_name GameData
+# GameData autoload singleton — do NOT add class_name here, it conflicts with the autoload registration
+# Accessed globally as GameData.xxx
 
 # Persistent game data - coins, unlocks, high score
 # Uses ConfigFile (INI-style) for simple save/load
