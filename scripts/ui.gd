@@ -21,6 +21,8 @@ var last_checkpoint := 0
 
 func _ready():
 	show_menu()
+	# Initialize veil indicator
+	update_veil_indicator("light")
 
 func show_menu():
 	menu.visible = true
