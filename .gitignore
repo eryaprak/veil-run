@@ -2,7 +2,7 @@
 .godot/
 .import/
 export.cfg
-export_presets.cfg
+# export_presets.cfg  # tracked intentionally (no secrets in it)
 
 # Imported translations (automatically generated from CSV files)
 *.translation

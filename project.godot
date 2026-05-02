@@ -15,6 +15,8 @@ config/description="A mystical endless runner where shadows and light collide"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+config/version="1.0.0"
+config/company="VoxDuru"
 
 [autoload]
 
@@ -62,4 +64,9 @@ veil_shift={
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_2d=1
-environment/defaults/default_clear_color=Color(0.05, 0.03, 0.1, 1)
+environment/defaults/default_clear_color=Color(0.04, 0.02, 0.1, 1)
+2d/snap/snap_2d_vertices_to_pixel=false
+
+[physics]
+
+2d/default_gravity=980.0
