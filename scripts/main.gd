@@ -61,7 +61,8 @@ func start_game():
 	ui.update_distance(0)
 
 func update_distance(delta):
-	distance += player.current_speed * delta
+	# Get distance from track manager
+	distance = track_manager.total_distance
 	ui.update_distance(int(distance))
 
 func check_checkpoint():
@@ -80,6 +81,7 @@ func collect_coin():
 
 func game_over():
 	game_state = "game_over"
+	track_manager.stop_generation()
 	ui.show_game_over(score, coins, int(distance))
 
 func continue_run():
